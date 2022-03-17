@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Roboto:wght@400;700&family=Smooch+Sans&display=swap');
+
+// colors
+$color-text: black;
+$color-highlight: #00ffff;
+$color-highlight-other: #fee11f;
+
+$color-beige: #F5DEB3;
+$color-beige-d: #4f432c;
+
+$color-blue: #5f9ea0;
+$color-blue-d: #7fb1b3;
+
+$color-slides: (
+    'slide1': $color-blue,
+    'slide2': linear-gradient(90deg, $color-blue 0%, $color-blue-d 100%) $color-blue,
+    'slide3': linear-gradient(90deg, $color-blue-d 0%, $color-beige 100%) $color-beige,
+    'slide4': $color-beige
+    
+);
+
+@each $slide, $color in $color-slides {
+    [data-anchor= #{$slide}] {
+        background: $color;
+    }
+}
+
+//fonts
+$font-size-base: 100%;
+$font-size-heading: 5em;
+$font-size-big: 2.5em;
+$font-size-srong: 1.2em;
+
+$font-size-heading-m: 4em;
+$font-size-big-m: 1.7em;
+
+$font-familiy-serif: 'Playfair Display', serif;
+$font-familiy-sans: 'Roboto', Helvetica, Arial, sans-serif;
+$font-family-default: 'Open sans', Helvetica, Arial, sans-serif;
+
+//other
+$width-mobile: 700px;
+$height-small: 600px;
+$width: 1030px;
+$border-r: 25px;

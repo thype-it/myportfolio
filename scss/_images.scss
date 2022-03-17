@@ -1,0 +1,9 @@
+
+$portfolioImg: 'ferrara', 'thype', 'omega', 'optika', 'jovinecky', 'webtailor';
+
+@each $img in $portfolioImg {
+    ##{$img} {
+        background-image: url('../img/portfolio/#{$img}.jpg');
+    }   
+}
+

@@ -1,0 +1,124 @@
+
+//lottie
+lottie-player {
+    height: fit-content;
+    max-height: 417px;
+}
+
+//helper elements
+
+.container {
+    @include container($width);
+    width: 90%;
+    height: 80%;
+}
+
+.wrapper {
+    @include flex-center;
+    height: 90%;
+    justify-content: space-around;
+}
+
+.overlay {
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .25s ease-out;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.heading {
+    font-size: $font-size-heading;
+    font-family: $font-familiy-sans;
+    font-weight: 600;
+    text-transform: uppercase;
+    &.small {
+        font-size: $font-size-big;
+        color: white;
+    }
+}
+
+.strong {
+    font-size: $font-size-srong;
+}
+
+.highlight {
+    color: $color-highlight;
+}
+
+.white {
+    color: white;
+}
+
+.resize {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $color-beige;
+    z-index: 20;
+    display: none;
+}
+
+//content elements
+
+.infobox {
+    border-radius: $border-r;
+    border-bottom-right-radius: 0;
+    border-color: aqua;
+    border-width: 10px;
+    border-style: solid;
+    padding: 1em;
+    margin: 0 auto;
+    background: white;
+    max-width: 800px;
+    color: gray;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    &.right {
+        border-bottom-right-radius: $border-r;
+        border-bottom-left-radius: 0;
+    }
+    &.other {
+        border-color: $color-highlight-other;
+    }
+    a {
+        color: gray !important;
+    }
+}
+
+.technologies {
+    min-width: 200px;
+    li {
+        background: white;
+        padding: 15px 10px;
+        border-radius: 20px;
+        border: 1px solid black;
+        margin: 2px 0;
+        box-shadow:  inset 0 0 5px 2px rgba(0,0,0,0.5);
+        transition: .3s;
+        
+    }
+}
+
+.certificates {
+    margin-left: 20px;
+}
+
+.quote {
+    font-size: $font-size-big;
+    padding: 0.2em 0.5em;
+    border: 10px double white;
+    border-radius: $border-r;
+    color: white;
+    font-family: $font-familiy-serif;
+    font-style: italic;
+}

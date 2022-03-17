@@ -1,0 +1,128 @@
+// 1ST SECTION
+
+.section[data-index = "1"] > *{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items:center;
+    background-color: $color-beige;
+    background: linear-gradient(0deg, $color-beige-d 0%, $color-beige 100%);
+ }
+ 
+ .img-wrapper {
+     z-index: 1;
+     width: 70%;
+     max-width: 760px;
+     position: relative;
+     z-index: 1;
+     article {
+         position: absolute;
+         z-index: 2;
+         bottom: 10%;
+         width: 100%;
+         background-color: rgba(0,0,0,0.7);
+         backdrop-filter: blur(4px);
+         color: white;
+     }
+ }
+ 
+ //2nd SECTION
+ 
+ .portfolio {
+     display: flex;
+     justify-content: center;
+     width: 100%;
+     flex-wrap: wrap;
+     li {
+         @include img-background;
+         margin: 1em;
+         width: 40%;
+         min-height: 250px;
+         background-color: red;
+         overflow: hidden;
+         transition: .4s;
+         position: relative;
+         box-shadow: 0 0 10px 1px black;
+         border-radius: $border-r;
+         a {
+             @include flex-center;
+             color: white;
+             text-decoration: none;
+             @include headings {
+                 border-bottom: 1px solid white;
+                 margin-bottom: 0.2em;
+                 padding-bottom: 0.2em;
+             }
+             height: 100%;
+             width: 100%;
+             position: relative;
+         }
+ 
+         //hover
+         &:hover, &:focus {
+             .overlay {
+                 opacity: 0.5;
+             }
+         }
+     }
+ }
+
+ .slide {
+     .heading.small {
+         color: darken(gray, 20%);
+         margin-bottom: 10px;
+     }
+ }
+ 
+ // 3rd SECTION
+ 
+ .section[data-index = "3"] {
+    
+    background: white;
+    background: linear-gradient(0deg, gray 0%, white 100%);
+
+    .container {
+        @include flex-center;
+        justify-content: space-between;
+
+    }
+    .row {
+        justify-content: space-between;
+    }
+
+    .infobox {
+        margin-left: 20px;
+    }
+ 
+}
+
+//4TH SECTION
+.section[data-index = "4"]{
+
+    background: gray;
+    background: linear-gradient(180deg, gray 0%, #111 100%);
+    color: white;
+
+    .container {
+        @include flex-center;
+        justify-content: space-between;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .row:nth-child(1) {
+        height: 60%;
+        justify-content: space-between;
+    }
+    .infobox {
+        margin: 15px 0;
+    }   
+    .quote {
+        margin-bottom: 15px;
+    }
+    a {
+        color: white;
+    } 
+}
+ 
+ 

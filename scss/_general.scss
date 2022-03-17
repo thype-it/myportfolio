@@ -1,0 +1,57 @@
+// border-box
+html {
+	@include box-sizing( border-box );
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+// text
+@include headings {
+    margin: 0;
+}
+p {
+	margin: 0;
+}
+
+//body 
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+	font-size: $font-size-base;
+	font-family: $font-family-default;
+	position: relative;
+}
+
+//sections
+section {
+    position: relative;
+    & > * {
+        @include flex-center;
+    }
+}
+
+// links and images
+a {
+	color: $color-text;
+	text-decoration: underline;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+// lists
+ul {
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+
+	li, a {
+		display: inline-block;
+	}
+}

@@ -1,0 +1,43 @@
+
+//
+//	MIXINS
+// ------------------------------------------------------
+
+@mixin box-sizing( $value ) {
+	-webkit-box-sizing: $value;
+	   -moz-box-sizing: $value;
+	        box-sizing: $value;
+}
+
+
+@mixin container( $width ) {
+	max-width: $width;
+	margin: 0 auto;
+}
+
+
+@mixin selection {
+	::-moz-selection { @content }
+	::-o-selection { @content }
+	::selection { @content }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin img-background {
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin headings {
+    h1, h2, h3,
+    h4, h5, h6 {
+        @content;
+    }
+}
